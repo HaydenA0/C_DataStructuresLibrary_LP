@@ -21,7 +21,7 @@ typedef enum
     DS_ALLOC_ERROR = 1,
     DS_NULL_POINTER = 2,
     DS_ARGS_ERROR = 3,
-    DS_NOT_FOUND = 4,
+    DS_NOT_FOUND = -1,
     DS_ALREADY_EXIST = 5
 } ERROR_FLAGS;
 
