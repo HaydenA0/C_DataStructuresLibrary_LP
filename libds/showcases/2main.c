@@ -57,11 +57,8 @@ int main(void)
     target = 2;
     if (ds_llist_search(list, &target, &found) == DS_SUCCESS)
     {
-
-        int tmp_value = 100;
-        DsNode *temp = ds_node_new(&tmp_value, sizeof(int));
-        u8 error = ds_llist_insert_after(list, found, temp);
-        ds_print_errors(error);
+        ds_list_delete(list, (DsNode *)found);
+        printf("Deleted value: %d\n", target);
     }
     print_list(list);
 

@@ -1,31 +1,7 @@
-#include "./ds_dynamic_list.h"
+#include "./ds_dynamic_array.h"
 #include "ds_globals.h"
 #include <stdlib.h>
 #include <string.h>
-
-void ds_print_errors(ERROR_FLAGS throwed)
-{
-    if (throwed == DS_ALLOC_ERROR)
-    {
-        printf("Allocation Error\n");
-    }
-    if (throwed == DS_NULL_POINTER)
-    {
-        printf("Given a NULL pointer\n");
-    }
-    if (throwed == DS_ARGS_ERROR)
-    {
-        printf("Invalid args in function\n");
-    }
-    if (throwed == DS_NOT_FOUND)
-    {
-        printf("Not Found\n");
-    }
-    if (throwed == DS_ALREADY_EXIST)
-    {
-        printf("Element Already Exist\n");
-    }
-}
 
 DsArray *ds_array_new(const u16 element_size, const u32 size)
 {
@@ -43,7 +19,7 @@ DsArray *ds_array_new(const u16 element_size, const u32 size)
     new_array->size = size;
     new_array->capacity = 2 * size;
     new_array->element_size = element_size;
-    new_array->data = NULL;
+    new_array->data = malloc(element_size * size);
 
     return new_array;
 }

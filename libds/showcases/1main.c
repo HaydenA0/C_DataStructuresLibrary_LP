@@ -1,4 +1,4 @@
-#include "./ds_dynamic_list.h"
+#include "./ds_dynamic_array.h"
 #include "./ds_globals.h"
 #include <stdio.h>
 

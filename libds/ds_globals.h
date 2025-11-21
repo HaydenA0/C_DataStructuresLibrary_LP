@@ -1,6 +1,7 @@
 #ifndef DS_GLOBALS_H
 #define DS_GLOBALS_H
 #include <stdint.h>
+#include <stdio.h>
 
 typedef int8_t i8;
 typedef int16_t i16;
@@ -21,8 +22,11 @@ typedef enum
     DS_ALLOC_ERROR = 1,
     DS_NULL_POINTER = 2,
     DS_ARGS_ERROR = 3,
-    DS_NOT_FOUND = -1,
-    DS_ALREADY_EXIST = 5
+    DS_NOT_FOUND = 4,
+    DS_ALREADY_EXIST = 5,
+    DS_INVALID_STATE
+
 } ERROR_FLAGS;
+void ds_print_errors(ERROR_FLAGS throwed);
 
 #endif

@@ -1,5 +1,5 @@
-#ifndef DS_DYNAMIC_LIST_H
-#define DS_DYNAMIC_LIST_H
+#ifndef DS_DYNAMIC_ARRAY_H
+#define DS_DYNAMIC_ARRAY_H
 #include "./ds_globals.h"
 
 typedef struct
@@ -10,7 +10,6 @@ typedef struct
     u16 element_size;
 } DsArray;
 
-void ds_print_errors(ERROR_FLAGS throwed);
 DsArray *ds_array_new(const u16 element_size, const u32 size);
 void ds_array_destroy(DsArray *array);
 u8 ds_array_append(DsArray *array, const void *element);

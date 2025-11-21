@@ -1,5 +1,5 @@
 compiler = clang
-compiler_flags = -Wall -Wextra -ggdb -I./lib
+compiler_flags = -Wall -Wextra -ggdb 
 output = ./bin/main
 
 .PHONY: all run debug compile
