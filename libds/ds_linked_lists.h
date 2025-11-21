@@ -36,6 +36,5 @@ u8 ds_llist_pushfront(DsLinkedList *llist, DsNode *element); // append at the be
 u8 ds_llist_pushback(DsLinkedList *llist, DsNode *element);  // append at the end
 u8 ds_list_delete(DsLinkedList *llist, DsNode *element);
 u8 ds_llist_insert_after(DsLinkedList *llist, DsNode *node_to_append_after, DsNode *node_to_append);
-u8 ds_llist_remove_after(DsLinkedList *llist, DsNode *node); // remove after node
 
 #endif

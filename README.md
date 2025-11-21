@@ -1,5 +1,10 @@
 
 
+Resources  :
+data Structures and Algorithm Analysis in C - Mark Allen Weiss
+
+
+
 
 * Use the pattern `ds_Type_action()` for all functions
 * Example: `ds_list_create()`, `ds_hashmap_get()`

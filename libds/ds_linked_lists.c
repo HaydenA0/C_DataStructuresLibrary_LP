@@ -169,10 +169,11 @@ u8 ds_llist_insert_after(DsLinkedList *llist, DsNode *node_to_append_after, DsNo
     }
     else
     {
+        DsNode *next_node = node_to_append_after->next_element;
         node_to_append_after->next_element = node_to_append;
         node_to_append->prev_element = node_to_append_after;
-        node_to_append_after->next_element->prev_element = node_to_append;
-        node_to_append->next_element = node_to_append_after;
+        next_node->prev_element = node_to_append;
+        node_to_append->next_element = next_node;
         llist->size++;
     }
     return DS_SUCCESS;
